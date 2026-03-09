@@ -1,0 +1,22 @@
+{
+  "name": "playwright-k6",
+  "version": "0.0.1",
+  "description": "Example of UI and Performance tests using Playwright and K6",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "playwright test",
+    "test:ui:ui": "playwright test --ui",
+    "test:ui:chromium": "playwright test --project=chromium",
+    "test:ui:firefox": "playwright test --project=firefox",
+    "test:ui:webkit": "playwright test --project=webkit",
+    "test:perf": "k6 run -e REQRES_API_KEY=%REQRES_API_KEY% tests/performance/reqres-load-test.js"
+  },
+  "keywords": [],
+  "author": "Artem Reshchenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.5",
+    "typescript": "^5.7.3"
+  }
+}
